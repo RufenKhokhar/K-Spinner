@@ -27,7 +27,33 @@ import androidx.compose.ui.layout.onGloballyPositioned
 import androidx.compose.ui.platform.LocalDensity
 import androidx.compose.ui.unit.DpSize
 
-
+/**
+ * A customizable spinner (dropdown) composable built with Material 3 components.
+ *
+ * This composable allows users to select an option from a list. It displays the
+ * currently selected option and expands a dropdown menu to show all available options
+ * when clicked.
+ *
+ * @param T The type of data in the options list.
+ * @param modifier Optional [Modifier] to be applied to the spinner.
+ * @param options The list of options to display in the dropdown.
+ * @param selectedOption The currently selected option.
+ * @param onOptionSelected A callback function that is invoked when an option is selected
+ *   from the dropdown. It receives the selected option as a parameter.
+ * @param shape The shape of the spinner's outline. Defaults to [CardDefaults.shape].
+ * @param colors The colors to be used for the spinner's container. Defaults to [CardDefaults.cardColors].
+ * @param border Optional [BorderStroke] to be applied to the spinner's container.
+ * @param selectedOptionItem A composable lambda that defines how the `selectedOption`
+ *   is displayed when the dropdown is collapsed. It receives the `selectedOption` as a parameter.
+ * @param dropDownOption A composable lambda that defines how each option in the `options`
+ *   list is displayed within the dropdown menu. It receives an option from the list as a parameter.
+ * @param dropDownIcon A composable lambda that defines the icon to be displayed at the
+ *   trailing edge of the selected option item (typically an arrow indicating it's a dropdown).
+ * @param onOptionsShown An optional callback function that is invoked when the dropdown menu
+ *   becomes visible.
+ * @param onOptionsHidden An optional callback function that is invoked when the dropdown menu
+ *   is dismissed.
+ */
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun <T> KSpinner(
