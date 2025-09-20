@@ -11,7 +11,7 @@ plugins {
     alias(libs.plugins.maven.publish)
 }
 group = "io.github.rufenkhokhar"
-version = "1.0.0"
+version = "1.0.1"
 
 kotlin {
     jvmToolchain(21)
@@ -62,7 +62,7 @@ mavenPublishing {
     coordinates(
         groupId = "io.github.rufenkhokhar",
         artifactId = "K-Spinner",
-        version = "1.0.0"
+        version = "1.0.1"
     )
     pom {
         name.set("K-Spinner")
